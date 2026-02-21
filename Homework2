@@ -1,0 +1,17 @@
+public class Main {
+    public static void main(String[] args) {
+        for (int number = 100; number <= 999; number++) {
+            if (number % 10 == 0) {
+                int sum = 0;
+                for (int divisor = 1; divisor <= number; divisor++) {
+                    if (number % divisor == 0 && divisor % 2 != 0) {
+                        sum += divisor;
+                    }
+                }
+                if (sum % 10 == 0) {
+                    System.out.print(number + " ");
+                }
+            }
+        }
+    }
+}
