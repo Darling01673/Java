@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int count = 0; 
+        int weightSum = 0;  
+        while (true) {
+            System.out.print("Введите вес: ");
+            int w = scanner.nextInt();
+            if (count + 1 > 6) {
+                System.out.println("Максимальное количество людей");
+                break;
+            }
+            if (weightSum + w > 450) {
+                System.out.println("Максимальный вес достигнут");
+                break;
+            }
+            count++;
+            weightSum += w;
+        }
+        System.out.println("Людей: " + count);
+        System.out.println("Вес: " + weightSum);
+        scanner.close();
+    }
+}
