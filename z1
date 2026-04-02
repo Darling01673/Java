@@ -1,0 +1,13 @@
+public class Main {
+    public static void checkPoint(int x0, int y0, int r, int x, int y) {
+        double distance = Math.sqrt((x - x0) * (x - x0) + (y - y0) * (y - y0));
+        if (distance <= r) {
+            System.out.println("Точка внутри круга");
+        } else {
+            System.out.println("Точка вне круга");
+        }
+    }
+public static void main(String[] args) {
+        checkPoint(0, 0, 5, 3, 4);  // Точка (3,4) внутри круга с центром (0,0) и радиусом 5
+    }
+}
