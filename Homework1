@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите трехзначное число ");
+        int number = scanner.nextInt();
+        int a = number / 100;          
+        int b = (number / 10) % 10;
+        int c = number % 10;
+        int result;
+        if (number > 500) {
+            result = c * 100 + b * 10 + a;
+            System.out.println("Новое число " + result);
+        } else {
+            result = a * 100 + c * 10 + b;
+            System.out.println("Новое число " + result);
+        }
+        scanner.close();
+    }
+}
